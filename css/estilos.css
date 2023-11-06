@@ -30,8 +30,14 @@ body {
   background-color: #A020F0;
 }
 
+.image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 .image-column img {
     width: 100%;
-    margin: 40px 0;
-    border: 2px solid #D50B33; /* Adicione esta linha para criar as bordas verdes */
+    margin: 10px 0;/* Adicione esta linha para criar as bordas verdes */
 }

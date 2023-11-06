@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FORTUNE TIGER - IJOGO</title>
+
+  <!-- Inclua o link para o CSS do Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Estilo personalizado para o background preto e a altura do carrossel -->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <link type="text/css" rel="stylesheet" href="../estilo-menu.css">
+  <link type="text/css" rel="stylesheet" href="../css/estilos.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: black;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    .container {
+      justify-content: space-evenly;
+      display: flex;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .entrada {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    /* Botão com a cor verde */
+    button {
+      background-color: #D50B33;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* CSS media query para dispositivos com largura máxima de 600px */
+    @media (max-width: 600px) {
+      /* Modificar o tamanho da fonte do botão para dispositivos menores */
+      button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="1.png" alt="Imagem de Topo">
+  
+  
+    <div style="border: 10px solid black; padding: 5px;">
+        <h5>🔸️ FORTUNE TIGER - IJOGO 🔸️</h5>
+        
+    <div class="container">
+      <!-- Botão Gerar Entrada com cor verde -->
+    <button onclick="gerarEntrada()" id="gerar-entrada-btn">Gerar Entrada</button>
+        <!-- Corrigir a linha "Válido até" -->
+        <div style="border-top: 1px solid black; margin-top: 5px; padding-top: 5px;">
+            <h5 id="valido-ate">Válido até: </h5>
+        </div>
+    </div>
+    
+    <div class="container">
+    <div style="border: 0px solid green; margin-top: 5px; padding: 5px;">
+        <div class="entrada">
+            <span class="tipo"></span> <span id="normal"></span>
+        </div>
+    </div>
+    
+    <div style="border: 0px solid green; margin-top: 5px; padding: 5px;">
+        <div class="entrada">
+            <span class="tipo"></span> <span id="turbo"></span>
+        </div>
+    </div>
+    
+    <div style="border: 0px solid green; margin-top: 5px; padding: 5px;">
+        <div class="entrada">
+            <span class="tipo"></span> <span id="intercalando"></span>
+        </div>
+    </div>
+    
+    <div id="probability-result" style="border: 1px solid green; margin-top: 5px; padding: 5px; display: none;">
+        <div class="entrada">
+            <span class="tipo"></span> Probabilidade: <span id="probability-value"></span>%
+        </div>
+    </div></br>
+      </div>
+  </br>
+
+  <center><iframe width="100%" height="560" src="https://ijogo.com/r/or3gzVUm"></iframe></center>
+
+  <script>
+    function gerarEntrada() {
+      // Desabilitar o botão enquanto a entrada está sendo gerada
+      var gerarEntradaBtn = document.getElementById("gerar-entrada-btn");
+      gerarEntradaBtn.disabled = true;
+
+      // Exibir as frases de progresso
+      gerarEntradaBtn.textContent = "Aguardando";
+      setTimeout(function () {
+        gerarEntradaBtn.textContent = "Aguarde...";
+      }, 200);
+      setTimeout(function () {
+        gerarEntradaBtn.textContent = "Analisando Servidor";
+      }, 2000);
+      setTimeout(function () {
+        gerarEntradaBtn.textContent = "Analizar Parâmetros";
+      }, 2500);
+      setTimeout(function () {
+        gerarEntradaBtn.textContent = "Executando Entrada";
+      }, 2000);
+      
+      // Simulação de um intervalo de tempo para processamento (pode ser substituído pela lógica real)
+      setTimeout(function () {
+        var validoAte = obterHorarioValidoAte();
+        var opcoesNormal = ["1x Normal", "2x Normal", "3x Normal", "4x Normal", "5x Normal", "6x Normal", "7x Normal"];
+        var opcoesTurbo = ["1x Turbo", "2x Turbo", "3x Turbo", "4x Turbo", "5x Turbo", "6x Turbo", "7x Turbo", "8x Turbo"];
+        var opcoesIntercalando = ["Intercalando", "Intercalando", "Intercalando", "Intercalando"];
+
+        var normal = opcoesNormal[Math.floor(Math.random() * opcoesNormal.length)];
+        var turbo = opcoesTurbo[Math.floor(Math.random() * opcoesTurbo.length)];
+        var intercalando = opcoesIntercalando[Math.floor(Math.random() * opcoesIntercalando.length)];
+
+        document.getElementById("valido-ate").textContent = "Válido até: " + validoAte;
+        document.getElementById("normal").textContent = normal;
+        document.getElementById("turbo").textContent = turbo;
+        document.getElementById("intercalando").textContent = intercalando;
+
+        // Generate random probability between 72 and 96
+        var randomProbability = Math.floor(Math.random() * 25) + 72;
+
+        // Update the probability value and display it
+        var probabilityValue = document.getElementById("probability-value");
+        probabilityValue.textContent = randomProbability;
+        var probabilityResult = document.getElementById("probability-result");
+        probabilityResult.style.display = "block";
+
+        // Ativar o botão novamente após a conclusão
+        gerarEntradaBtn.textContent = "Sinal Finalizado";
+        gerarEntradaBtn.disabled = false;
+      }, 8500); // Simulando um tempo de processamento de 8.5 segundos
+    }
+
+    function obterHorarioValidoAte() {
+      var horarioAtual = new Date();
+      var minutos = horarioAtual.getMinutes();
+      var proximoMinuto = Math.ceil(minutos / 6) * 6; // Próximo múltiplo de 6
+      var segundosRestantes = (proximoMinuto - minutos) * 60; // Calcula segundos restantes até o próximo múltiplo de 6
+      var horarioValidoAte = new Date(horarioAtual.getTime() + segundosRestantes * 1000);
+
+      var horas = horarioValidoAte.getHours();
+      var minutosFormatados = ("0" + horarioValidoAte.getMinutes()).slice(-2);
+
+      return horas + ":" + minutosFormatados;
+    }
+  </script>
+  </br>
+</br>
+</br>
+  
+ <div class="navegacao">
+     <ul>
+       <li class="lista ativo">
+         <a href="../index.html">
+  <span class="icone"><i class="fi fi-ss-home"></i></span>
+  <span class= "texto">Início</span>
+         </a>
+       </li>
+       <li class="lista">
+         <a href="../sinais.html">
+  <span class="icone"><i class="fi fi-ss-message-bot"></i></span>
+  <span class= "texto">Sinais</span>
+         </a>
+       </li>
+       <li class="lista">
+         <a href="../plataformas.html">
+  <span class="icone"><i class="fi fi-ss-dice-alt"></i></span>
+  <span class= "texto">Bancas</span>
+         </a>
+       </li>
+       <li class="lista">
+         <a href="../bonus.html">
+  <span class="icone"><i class="fi fi-ss-money-check-edit"></i></span>
+  <span class= "texto">Bônus</span>
+         </a>
+       </li>
+       <div class="indicador"></div>
+     </ul>
+   </div><!--navegacao-->
+  
+  <script src="../menu.js"></script>
+</body>
+</html>

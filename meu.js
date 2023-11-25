@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function displayData(data) {
-    // Lógica para exibir os dados na página, por exemplo, preenchendo o div com id "jsonContainer"
-    document.getElementById("jsonContainer").innerText = JSON.stringify(data, null, 2);
+    // Exemplo: exibir os dados em um formato legível
+    const jsonContainer = document.getElementById("jsonContainer");
+    jsonContainer.innerText = JSON.stringify(data, null, 2);
 }
-
-

@@ -1,0 +1,517 @@
+{
+  "content": [
+    {
+      "id": "1c9e2159",
+      "settings": {
+        "min_height": {
+          "unit": "px",
+          "size": 56,
+          "sizes": []
+        },
+        "background_background": "classic",
+        "background_color": "#03C6FC",
+        "flex_align_items": "stretch",
+        "flex_gap": {
+          "size": 10,
+          "unit": "px"
+        },
+        "flex_justify_content": "center",
+        "eael_parallax_layers_list": [],
+        "eael_cl_logics": [
+          {
+            "_id": "506f062"
+          }
+        ]
+      },
+      "elements": [
+        {
+          "id": "48f1a4ff",
+          "settings": {
+            "title": "  Seja bem  <strong>vindo!</strong>",
+            "align": "center",
+            "title_color": "#232323",
+            "typography_typography": "custom",
+            "typography_font_family": "Ubuntu",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 24,
+              "sizes": []
+            },
+            "typography_font_size_mobile": {
+              "unit": "px",
+              "size": 22,
+              "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+              "unit": "px",
+              "size": 36,
+              "sizes": []
+            },
+            "typography_line_height_mobile": {
+              "unit": "em",
+              "size": 1,
+              "sizes": []
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "eael_tooltip_section_content": "I am a tooltip",
+            "eael_ext_content_protection_password_placeholder": "Enter Password",
+            "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+            "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+            "eael_cl_logics": [
+              {
+                "_id": "826cc1c"
+              }
+            ]
+          },
+          "elements": [],
+          "isInner": false,
+          "widgetType": "heading",
+          "elType": "widget"
+        }
+      ],
+      "isInner": false,
+      "elType": "container"
+    },
+    {
+      "id": "644af6c2",
+      "settings": {
+        "background_background": "classic",
+        "background_image": {
+          "id": "",
+          "url": "",
+          "alt": "",
+          "source": "library",
+          "size": ""
+        },
+        "background_position": "center center",
+        "background_repeat": "no-repeat",
+        "background_size": "cover",
+        "background_overlay_background": "classic",
+        "background_overlay_color": "#FDD900",
+        "background_overlay_image": {
+          "url": "",
+          "id": "",
+          "size": "",
+          "alt": "",
+          "source": "library"
+        },
+        "background_overlay_position": "center center",
+        "background_overlay_repeat": "no-repeat",
+        "background_overlay_size": "cover",
+        "background_overlay_opacity": {
+          "unit": "px",
+          "size": 0.86,
+          "sizes": []
+        },
+        "overlay_blend_mode": "color",
+        "padding": {
+          "unit": "px",
+          "top": "50",
+          "right": "15",
+          "bottom": "150",
+          "left": "15",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "50",
+          "right": "15",
+          "bottom": "50",
+          "left": "15",
+          "isLinked": false
+        },
+        "flex_direction": "row",
+        "flex_align_items": "stretch",
+        "flex_gap": {
+          "size": 10,
+          "unit": "px"
+        },
+        "eael_parallax_layers_list": [],
+        "eael_cl_logics": [
+          {
+            "_id": "ad224f2"
+          }
+        ],
+        "boxed_width": {
+          "unit": "px",
+          "size": 840,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "30a2649c",
+          "settings": {
+            "_column_size": 100,
+            "width": {
+              "size": null,
+              "unit": "%"
+            },
+            "content_width": "full",
+            "eael_parallax_layers_list": [],
+            "eael_cl_logics": [
+              {
+                "_id": "fe43cf6"
+              }
+            ]
+          },
+          "elements": [
+            {
+              "id": "3600375e",
+              "settings": {
+                "image": {
+                  "url": "https://clubeassertivo.com/wp-content/uploads/2023/10/3.png",
+                  "id": 726,
+                  "size": "",
+                  "alt": "",
+                  "source": "library"
+                },
+                "image_size": "custom",
+                "width": {
+                  "unit": "%",
+                  "size": 35,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 65,
+                  "sizes": []
+                },
+                "eael_tooltip_section_content": "I am a tooltip",
+                "eael_ext_content_protection_password_placeholder": "Enter Password",
+                "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+                "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+                "eael_cl_logics": [
+                  {
+                    "_id": "f62ea15"
+                  }
+                ]
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "image",
+              "elType": "widget"
+            },
+            {
+              "id": "2fb2d8c3",
+              "settings": {
+                "eael_tooltip_section_content": "I am a tooltip",
+                "eael_ext_content_protection_password_placeholder": "Enter Password",
+                "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+                "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+                "eael_cl_logics": [
+                  {
+                    "_id": "6633ddd"
+                  }
+                ]
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "spacer",
+              "elType": "widget"
+            },
+            {
+              "id": "2d26cde0",
+              "settings": {
+                "title": "Tudo certo! Clique no botão abaixo para prosseguir",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Ubuntu",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 52,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 38,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 64,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "em",
+                  "size": 1.2,
+                  "sizes": []
+                },
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "eael_tooltip_section_content": "I am a tooltip",
+                "eael_ext_content_protection_password_placeholder": "Enter Password",
+                "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+                "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+                "eael_cl_logics": [
+                  {
+                    "_id": "8f819b0"
+                  }
+                ]
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "heading",
+              "elType": "widget"
+            },
+            {
+              "id": "1495f60",
+              "settings": {
+                "text": "Cadastre e jogue!",
+                "align": "center",
+                "typography_typography": "custom",
+                "typography_font_family": "Ubuntu",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "background_color": "#03C6FC",
+                "background_gradient_angle": {
+                  "unit": "deg",
+                  "size": 150,
+                  "sizes": []
+                },
+                "button_background_hover_background": "",
+                "button_background_hover_color": "#FD17FF",
+                "button_background_hover_color_b": "#A917FF",
+                "button_background_hover_gradient_angle": {
+                  "unit": "deg",
+                  "size": 150,
+                  "sizes": []
+                },
+                "hover_animation": "grow",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "108",
+                  "right": "108",
+                  "bottom": "108",
+                  "left": "108",
+                  "isLinked": true
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "50",
+                  "bottom": "20",
+                  "left": "50",
+                  "isLinked": false
+                },
+                "_margin_tablet": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "link": {
+                  "url": "[COLOQUE SEU LINK DE AFILIADO AQUI]",
+                  "is_external": "on",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "eael_tooltip_section_content": "I am a tooltip",
+                "eael_ext_content_protection_password_placeholder": "Enter Password",
+                "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+                "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+                "eael_cl_logics": [
+                  {
+                    "_id": "c725d77"
+                  }
+                ],
+                "button_text_color": "#232323",
+                "_margin": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "_margin_mobile": {
+                  "unit": "px",
+                  "top": "15",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "button",
+              "elType": "widget"
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        }
+      ],
+      "isInner": false,
+      "elType": "container"
+    },
+    {
+      "id": "176d14d4",
+      "settings": {
+        "padding": {
+          "unit": "px",
+          "top": "40",
+          "right": "0",
+          "bottom": "40",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#000000",
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "flex_gap": {
+          "size": 10,
+          "unit": "px"
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "40",
+          "right": "15",
+          "bottom": "40",
+          "left": "15",
+          "isLinked": false
+        },
+        "eael_parallax_layers_list": [],
+        "eael_cl_logics": [
+          {
+            "_id": "31260de"
+          }
+        ]
+      },
+      "elements": [
+        {
+          "id": "fe7a372",
+          "settings": {
+            "image": {
+              "id": 54,
+              "url": "https://multivencedor.com.br/wp-content/uploads/2023/07/selo-site-seguro-768x131-1-1-1-300x51-1-1.png"
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "eael_tooltip_section_content": "I am a tooltip",
+            "eael_ext_content_protection_password_placeholder": "Enter Password",
+            "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+            "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+            "eael_cl_logics": [
+              {
+                "_id": "f39efb4"
+              }
+            ]
+          },
+          "elements": [],
+          "isInner": false,
+          "widgetType": "image",
+          "elType": "widget"
+        },
+        {
+          "id": "30d0a4a4",
+          "settings": {
+            "view": "inline",
+            "icon_list": [
+              {
+                "text": "Privacidade",
+                "selected_icon": {
+                  "value": "",
+                  "library": ""
+                },
+                "_id": "ba005a4"
+              },
+              {
+                "text": "Termos de uso",
+                "selected_icon": {
+                  "value": "",
+                  "library": ""
+                },
+                "_id": "82a393b"
+              }
+            ],
+            "icon_align": "center",
+            "icon_typography_typography": "custom",
+            "icon_typography_font_family": "Montserrat",
+            "icon_typography_font_size": {
+              "unit": "px",
+              "size": 12,
+              "sizes": []
+            },
+            "icon_typography_font_weight": "500",
+            "icon_typography_line_height": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "text_color": "#54595F",
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "eael_tooltip_section_content": "I am a tooltip",
+            "eael_ext_content_protection_password_placeholder": "Enter Password",
+            "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+            "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+            "eael_cl_logics": [
+              {
+                "_id": "83d31fb"
+              }
+            ]
+          },
+          "elements": [],
+          "isInner": false,
+          "widgetType": "icon-list",
+          "elType": "widget"
+        },
+        {
+          "id": "2501e4dd",
+          "settings": {
+            "editor": "<p>ESTE SITE NÃO É do FACEBOOK: Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira. FACEBOOK é uma marca comercial independente da FACEBOOK, Inc.</p><p>Os resultados referentes ao serviço foram avaliados e comprovados por nossos clientes. Não garantimos os resultados iguais para todos, estes variam de pessoa para pessoa dependendo de diversos fatores individuais. As informações fornecidas neste site destina-se ao seu conhecimento geral e não garantimos um resultado específico, todo resultado será de inteira responsabilidade do cliente. Essa página/produto não tem vinculo com o Facebook.</p>",
+            "align": "center",
+            "text_color": "#7A7A7A",
+            "typography_typography": "custom",
+            "typography_font_family": "Ubuntu",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 12,
+              "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "eael_tooltip_section_content": "I am a tooltip",
+            "eael_ext_content_protection_password_placeholder": "Enter Password",
+            "eael_ext_content_protection_password_submit_btn_txt": "Submit",
+            "eael_ext_content_protection_password_incorrect_message": "Password does not match.",
+            "eael_cl_logics": [
+              {
+                "_id": "450c166"
+              }
+            ]
+          },
+          "elements": [],
+          "isInner": false,
+          "widgetType": "text-editor",
+          "elType": "widget"
+        }
+      ],
+      "isInner": false,
+      "elType": "container"
+    }
+  ],
+  "page_settings": {
+    "background_background": "classic",
+    "background_color": "#000000",
+    "eael_ext_toc_title": "Table of Contents"
+  },
+  "version": "0.4",
+  "title": "PRESELL AFILIADOS DONALD",
+  "type": "page"
+}

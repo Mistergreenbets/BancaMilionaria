@@ -1,12 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("meu.json")
-        .then(response => response.json())
-        .then(data => displayData(data))
-        .catch(error => console.error("Erro ao carregar JSON:", error));
-});
-
-function displayData(data) {
-    // Exemplo: exibir os dados em um formato legível
-    const jsonContainer = document.getElementById("jsonContainer");
-    jsonContainer.innerText = JSON.stringify(data, null, 2);
-}
+const xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://mistergreenbets.github.io/BancaMilionaria/json/meu.json);
+xhr.onload = () => {
+  if (xhr.status === 200) {
+    const data = JSON.parse(xhr.responseText);
+    // Use os dados do JSON
+  } else {
+    console.error('Erro ao carregar o arquivo JSON:', xhr.statusText);
+  }
+};
+xhr.send();

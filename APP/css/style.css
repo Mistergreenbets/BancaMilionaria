@@ -1,0 +1,548 @@
+@font-face {
+    font-family: "Black";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("../fonts/Montserrat-Black.eot");
+    src: url("../Montserrat-Black.html") format("otf"),
+        url("../fonts/Montserrat-Black.ttf") format("truetype"),
+        url("../fonts/Montserrat-Black.woff") format("woff"),
+        url("../fonts/Montserrat-Black.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Bold";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("../fonts/Montserrat-Bold.eot");
+    src: url("../Montserrat-Bold.html") format("otf"),
+        url("../fonts/Montserrat-Bold.ttf") format("truetype"),
+        url("../fonts/Montserrat-Bold.woff") format("woff"),
+        url("../fonts/Montserrat-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("../fonts/Montserrat-Regular.eot");
+    src: url("../Montserrat-Regular.html") format("otf"),
+        url("../fonts/Montserrat-Regular.ttf") format("truetype"),
+        url("../fonts/Montserrat-Regular.woff") format("woff"),
+        url("../fonts/Montserrat-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Light";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("../fonts/Montserrat-Light.eot");
+    src: url("../Montserrat-Light.html") format("otf"),
+        url("../fonts/Montserrat-Light.ttf") format("truetype"),
+        url("../fonts/Montserrat-Light.woff") format("woff"),
+        url("../fonts/Montserrat-Light.woff2") format("woff2");
+}
+
+a {
+    font-style: none !important;
+    text-decoration: none !important;
+}
+
+b,
+strong {
+    font-family: 'Black';
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+h1 span {
+    color: #66fe67;
+    display: block;
+}
+.header-top{
+    color: #fff;
+    font-size: 28px !important;
+}
+.header-top b{
+    font-size: 28px !important;
+}
+body {
+    font-family: "Black";
+}
+
+footer {
+    margin-top: auto;
+}
+
+header .container>div {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+.btn-share{
+    display: block;
+    width: 65%;
+    margin: 20px auto;
+    height: 37px;
+    font-size: 0.8em;
+    line-height: 37px;
+    color: #fff;
+    font-family: 'Black';
+    border-radius: 8px;
+    background: linear-gradient(135deg, #2a5fd9, #00c3f0);
+}
+header {
+    position: relative;
+    background: #000;
+    padding: 20px 0;
+    border-bottom: 1px solid #2ddbfe;
+}
+
+header div img {
+    max-height: 55px;
+}
+
+header b {
+    color: #fff;
+    font-family: 'Black';
+    font-size: 2em;
+}
+
+header div>div {
+    width: 100%;
+    text-align: center;
+}
+
+header div>span {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 15px;
+    justify-content: center;
+    width: 52px;
+    color: #000;
+    padding: 0;
+    font-size: 28px;
+    border-radius: 50%;
+    background: linear-gradient(to top, #2fccfb, #4464e0);
+}
+
+.bg-image {
+    padding: 0;
+    background: #000;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    /* background-color: #363c75; */
+}
+
+.bg-image h1 img {
+    max-height: 55px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.bg-image h1 {
+    text-align: center;
+    margin: 0 0 25px;
+    color: #fff;
+    font-size: 3em;
+    font-family: 'Regular';
+}
+
+.bg-image h1 b {
+    font-family: 'Black';
+}
+
+.lista-jogos {
+    width: 100%;
+    position: relative;
+    gap: 30px 3%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.lista-jogos>div {
+    width: 31.3333%;
+}
+
+.lista-jogos div img {
+    width: 100%;
+    height: 345px;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 2px outset #30c6fa;
+}
+
+.lista-jogos div p {
+    background: #1942c5;
+    color: #fff;
+    font-family: 'Black';
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 75%;
+    margin: auto;
+    display: block;
+    font-size: 2.25em;
+    transform: translateY(-50%);
+}
+
+.lista-app {
+    width: 100%;
+    position: relative;
+}
+
+.item-list {
+    width: 75%;
+    margin: 25px auto;
+    display: block;
+    position: relative;
+}
+
+.visible-list {
+    border: 2px outset #30c6fa;
+    padding: 55px;
+    display: flex;
+    justify-content: space-between;
+    background: #131313;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+    transition: all .2s;
+}
+
+.visible-list img {
+    max-height: 95px;
+}
+
+.visible-list p {
+    padding: 0;
+    position: relative;
+    font-size: 2.25em;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+    font-family: 'Regular';
+}
+
+.visible-list p b {
+    font-size: 1.25em;
+    display: block;
+    font-family: 'Black';
+}
+
+.visible-list span {
+    color: #fff;
+    position: absolute;
+    height: auto;
+    left: 50%;
+    top: 100%;
+    transition: all 0.2s;
+    transform: translateX(-50%) translateY(50%);
+}
+
+.hidden-list {
+    background: #272727;
+    padding: 25px;
+    padding-top: 45px;
+    position: relative;
+    color: #fff;
+    display: none;
+    font-size: 1.75em;
+    font-family: 'Light';
+    transform: translateY(-5px);
+    border-radius: 5px;
+}
+
+.visible-list.clicked {
+    background: #000;
+    box-shadow: 0 1px 10px 0px #30c6fa;
+}
+
+.visible-list.clicked p span {
+
+    transform: translateX(-50%) translateY(50%) rotate(-180deg);
+}
+
+.visible-list.clicked+.hidden-list {
+    display: block;
+}
+
+.hidden-list ul {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+}
+
+.hidden-list li {
+    margin: 10px 0;
+    line-height: 1.25;
+    font-size: .75em;
+}
+
+.hidden-list li span {
+    height: 55px;
+    width: 55px;
+    background: linear-gradient(to top, #2fccfb, #4464e0);
+    border-radius: 3px;
+    color: #fff;
+    font-family: 'Black';
+    margin-right: 20px;
+    font-size: 1.75em;
+    display: inline-block;
+    text-align: center;
+    line-height: 55px;
+}
+
+@media (max-width:992px) {
+    .lista-jogos{
+        gap: 10px 3%;
+    }
+    .lista-app .item-list {
+        width: 100%;
+    }
+
+    .lista-jogos div img {
+        height: 120px;
+        object-position: bottom;
+        object-fit: cover;
+    }
+
+    .lista-jogos div p {
+        width: 90%;
+        font-size: .9em;
+    }
+
+    .bg-image {
+        padding: 25px 0;
+    }
+
+    .visible-list img {
+        max-height: 45px;
+    }
+
+    .visible-list {
+        padding: 25px;
+    }
+
+    .visible-list p {
+        font-size: 1.25em;
+    }
+
+    .visible-list span {
+        transform: translateX(-50%) translateY(25%);
+    }
+    .hidden-list ul{
+        margin-top: 35px;
+    }
+
+    .hidden-list {
+        padding: 15px;
+        padding-top: 35px;
+        font-size: 1.25em;
+    }
+
+    .hidden-list li span {
+        margin-right: 0;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+    }
+
+    .hidden-list li {
+        margin: 10px 0;
+        line-height: 1.25;
+        font-size: .75em;
+        display: grid;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        grid-template-columns: 55px 1fr;
+        align-items: center;
+        grid-column-gap: 5px;
+    }
+    header b{
+        font-size: 1.5em;
+    }
+    header div img{
+        max-height: 50px;
+    }
+    header div>span{
+        height: 50px;
+        width: 50px;
+        
+    }
+    .bg-image h1{
+        font-size: 2em;
+    }
+    .bg-image h1 img{
+        max-height: 50px;
+    }
+}
+
+/* BTN COMPARTILHAR E BAIXAR APP */
+.btn-share {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    height: 37px;
+    font-size: 1.4em;
+    line-height: 37px;
+    color: #fff;
+    font-family: 'Black';
+    border-radius: 8px;
+    background: linear-gradient(135deg, #2a5fd9, #00c3f0);
+}
+.bg-image h1 img {
+    max-height: 55px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+@media screen and (min-device-width: 771px) and (max-device-width: 991px) { 
+    .lista-jogos div img {
+        height: 225px !important;
+    }
+}
+@media (max-width: 992px) {
+    .bg-image h1 img {
+        max-height: 50px;
+    }
+    .lista-app .item-list {
+        width: 100%;
+    }
+    .visible-list {
+        padding: 25px;
+    }
+    .hidden-list {
+        padding: 15px;
+        padding-top: 35px;
+        font-size: 1.25em;
+    }
+    .visible-list img {
+        max-height: 45px;
+    }
+    .hidden-list ul {
+        margin-top: 35px;
+    }
+    .hidden-list li {
+        margin: 10px 0;
+        line-height: 1.25;
+        font-size: .75em;
+        display: grid;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        grid-template-columns: 55px 1fr;
+        align-items: center;
+        grid-column-gap: 5px;
+    }
+    .hidden-list li span {
+        margin-right: 0;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+    }
+    .visible-list p {
+        font-size: 1.25em;
+    }
+}
+.hidden-list ul {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+}
+.hidden-list li {
+    margin: 10px 0;
+    line-height: 1.25;
+    font-size: .75em;
+}
+.hidden-list li span {
+    height: 55px;
+    width: 55px;
+    background: linear-gradient(to top, #2fccfb, #4464e0);
+    border-radius: 3px;
+    color: #fff;
+    font-family: 'Black';
+    margin-right: 20px;
+    font-size: 1.75em;
+    display: inline-block;
+    text-align: center;
+    line-height: 55px;
+}
+.visible-list p {
+    padding: 0;
+    position: relative;
+    font-size: 2.25em;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+    font-family: 'Regular';
+}
+.visible-list p b {
+    font-size: 1.25em;
+    display: block;
+    font-family: 'Black';
+}
+.lista-app {
+    width: 100%;
+    position: relative;
+}
+.item-list {
+    width: 75%;
+    margin: 25px auto;
+    display: block;
+    position: relative;
+}
+.visible-list {
+    border: 2px outset #30c6fa;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    background: #131313;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+    transition: all .2s;
+    /* display: flex; */
+}
+.hidden-list {
+    background: #272727;
+    padding: 25px;
+    padding-top: 45px;
+    position: relative;
+    color: #fff;
+    display: none;
+    font-size: 1.75em;
+    font-family: 'Light';
+    transform: translateY(-5px);
+    border-radius: 5px;
+}
+.visible-list img {
+    max-height: 80px;
+}
+.visible-list p {
+    padding: 0;
+    position: relative;
+    font-size: 2.25em;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+    font-family: 'Regular';
+}
+.visible-list p {
+        font-size: 1.25em;
+    }

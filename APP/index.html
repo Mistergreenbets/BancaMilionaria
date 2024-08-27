@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Aplicativo da Banca Milionária</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="ico.ico">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+
+</head>
+
+<body style="margin: 0; text-align: center;">
+    <header>
+        <div class="container">
+            <div id="topo">
+
+                <div class="header-top">
+                    <img src="images/KELSOLO.png">
+                    <i><b>APP</b></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="bg-image">
+        <div class="container">
+
+            <h1>
+                <img src="images/games.png">
+                <b>JOGOS </b> DISPONÍVEIS
+            </h1>
+            <div class="lista-jogos">
+                <div id="./fortunetiger">
+                    <a href="fortunetiger/index.html">
+                        <img src="images/fortunetiger.webp">
+                    </a>
+                </div>
+                <div id="fortunedragon">
+                    <a href="fortunedragon/index.html">
+                        <img src="images/fortunedragon.webp">
+                    </a>
+                </div>
+                <div id="fortuneox">
+                    <a href="fortuneox/index.html">
+                        <img src="images/fortuneox.webp">
+                    </a>
+                </div>
+                <div id="fortunerabbit">
+                    <a href="fortunerabbit/index.html">
+                        <img src="images/fortunerabbit.webp">
+                    </a>
+                </div>
+                <div id="fortunemouse">
+                    <a href="fortunemouse/index.html">
+                        <img src="images/fortunemouse.webp">
+                    </a>
+                </div>
+                <div id="gateofolympus">
+                    <a href="icescape/index.html">
+                        <img src="images/icescape.png">
+                    </a>
+                </div>
+                <div id="roulette">
+                    <a href="cashmania/index.html">
+                        <img src="images/CashMania.webp">
+                    </a>
+                </div>
+            </div>
+            <div class="compartilha">
+                <a href="#" id="shareBtn" class="btn-share">COMPARTILHAR COM AMIGO</a>
+            </div>
+
+            <script type="text/javascript">
+                document.getElementById('shareBtn').onclick = function () {
+                    var text = window.location.href;
+                    var url = 'https://wa.me/?text=' + encodeURIComponent(text);
+                    window.open(url);
+                };
+            </script>
+            <h1>
+                <img src="images/baixar.png">
+                <b>VEJA COMO</b>
+                BAIXAR O APP
+            </h1>
+            <div class="lista-app">
+                <div class="item-list">
+                    <div class="visible-list">
+                        <img src="images/ios.png">
+                        <p>
+                            Veja como instalar <br>
+                            no seu dispositivos <b>IOS</b>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </p>
+                    </div>
+                    <div class="hidden-list">
+                        <p>Siga os passos para instalar de maneira <br> <b>CORRETA NO SEU SMARTPHONE</b></p>
+                        <ul>
+                            <li><span>1</span>Abra o aplicativo no Safari</li>
+                            <li><span>2</span>Clique no ícone de "compartilhamento" no canto inferior do
+                                smartphone</li>
+                            <li><span>3</span>Clique em "Adicionar à tela de início"</li>
+                            <li><span>4</span>Clique em "Adicionar" no canto superior direito</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-list">
+                    <div class="visible-list">
+                        <img src="images/android.png">
+                        <p>
+                            Veja como instalar
+                            <br>no seu dispositivos <b>ANDROID</b>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </p>
+                    </div>
+                    <div class="hidden-list">
+                        <p>Siga os passos para instalar de maneira <br> <b>CORRETA NO SEU SMARTPHONE</b></p>
+                        <ul>
+                            <li><span>1</span>Clique no ícone de "compartilhamento" no canto inferior do
+                                smartphone</li>
+                            <li><span>2</span>Clique em "Adicionar à tela de início"</li>
+                            <li><span>3</span>Clique em "Adicionar" no canto superior direito</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<script>
+    var visibleList = document.querySelectorAll('.lista-app .visible-list');
+
+    visibleList.forEach(function (list) {
+        list.addEventListener('click', function () {
+            document.querySelector(".visible-list").classList.remove("clicked")
+            this.classList.toggle('clicked');
+        });
+    });
+</script>
+
+</body>
+</html>

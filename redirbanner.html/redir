@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Redirecionar - Bancas</title>
+</head>
+<body>
+  <script>
+  var urls = new Array();
+
+urls[0] = "https://79bet.com/r/A060myUj";
+
+urls[1] = "https://9f.com/r/O5pX4bt7";
+
+urls[2] = "https://bit.ly/BancaMilionaria-bet-APP";
+
+urls[3] = "https://p9.com/r/xDOQjGFm";
+
+urls[4] = "https://wildbet777.com/r/KQaQlpU3";
+
+urls[5] = "https://wjcasino.com/r/6EE350Cq";
+
+urls[6] = "https://6r.com/r/xpWmlnil";
+
+var random = Math.floor(Math.random()*urls.length); window.location = urls[random];
+
+  </script>
+</body>
+</html>

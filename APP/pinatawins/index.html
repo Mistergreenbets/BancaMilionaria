@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo da Banca Milionária - Pinata Wins</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="m-0 px-15 pb-15">
+    <div class="content w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="header w-100">
+            <img class="w-100 h-auto img-header" src="images/PERSONAGEM.png" alt="Pinata Wins">
+            <div class="tit-bg py-10 bg-principal text-center">
+                <h1 class="m-0 f-Bold color-white">PINATA WINS</h1>
+            </div>
+        </div>
+        <div class="content-slots w-100 my-15">
+            <div class="list-slots w-100">
+                <div class="slot slot-turbo slot-shadow bg-sec py-5 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="slot-header text-center d-flex flex-column align-items-center justify-content-center">
+                        <img src="images/TURBO.webp" class="mx-auto mt-5" width="auto" height="45" alt="Turbo">
+                        <span class="f-Bold color-white mt-5">TURBO</span>
+                    </div>
+                    <div class="slot-info my-5 f-Bold color-white d-flex flex-column align-items-center justify-content-center">
+                        <span class="result-info" id="turbo">0</span>
+                        <span class="sub-info">RODADAS</span>
+                    </div>
+                </div>
+                <div class="slot slot-normal slot-shadow bg-sec py-5 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="slot-header text-center d-flex flex-column align-items-center justify-content-center">
+                        <img src="images/NORMAL.webp" class="mx-auto mt-5" width="auto" height="45" alt="Turbo">
+                        <span class="f-Bold color-white mt-5">NORMAL</span>
+                    </div>
+                    <div class="slot-info my-5 f-Bold color-white d-flex flex-column align-items-center justify-content-center">
+                        <span class="result-info" id="normal">0</span>
+                        <span class="sub-info">RODADAS</span>
+                    </div>
+                </div>
+                <div class="slot slot-validade slot-shadow bg-sec py-5 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="slot-header text-center d-flex flex-column align-items-center justify-content-center">
+                        <img src="images/VALIDADE.webp" class="mx-auto mt-5" width="auto" height="45" alt="Turbo">
+                        <span class="f-Bold color-white mt-5">VÁLIDO ATÉ</span>
+                    </div>
+                    <div class="slot-info my-5 f-Bold color-white d-flex flex-column align-items-center justify-content-center">
+                        <span class="result-info" id="timer">00:00</span>
+                        <span class="sub-info">MIN</span>
+                    </div>
+                </div>
+                <div class="slot slot-assertividade slot-shadow bg-sec py-5 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="slot-header text-center d-flex flex-column align-items-center justify-content-center">
+                        <img src="images/ACERTO.webp" class="mx-auto mt-5" width="auto" height="45" alt="Turbo">
+                        <span class="f-Bold color-white mt-5">ACERTO DE</span>
+                    </div>
+                    <div class="slot-info my-5 f-Bold color-white d-flex flex-column align-items-center justify-content-center">
+                        <span class="result-info" id="porcentagem">0</span>
+                        <span class="porcent-turbo">PORCENTO</span>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none w-100 carregando mt-10">
+                <div class="color-principal text-carregando f-Bold" id="text-carregando">CALIBRANDO SINAL</div>
+                <span class="loader mx-auto"></span>
+            </div>
+            <div class="btn-slots w-100 py-10 text-center mt-10" id="gerarSinal">
+                <span class="f-Bold color-white">GERAR NOVO SINAL</span>
+            </div>
+        </div>
+
+        <div class="carregaIframe"></div><div class="iframe-maxima w-100"></div>
+
+        <div class="popup-slots border-sec bg-principal" id="popup" style="top: 15px; opacity: 1;">
+            <div class="img-popup">
+                <img src="images/mark.webp" width="25" height="25" alt="Ganhou">
+            </div>
+            <div class="desc-pop-up bg-principal"><span id="nome">Gonçalo Guerreiro</span> acabou de GANHAR com o <span class="color-sec">App da
+                    Banca Milionária</span>!</div>
+        </div>
+
+    </div>
+
+<script>
+    window.onload = function () {
+
+        function getRandomName() {
+            const nomesCompletos = [
+                { nome: "João", sobrenome: "Silva" },
+                { nome: "Maria", sobrenome: "Santos" },
+                { nome: "Carlos", sobrenome: "Ferreira" },
+                { nome: "Ana", sobrenome: "Oliveira" },
+                { nome: "Pedro", sobrenome: "Costa" },
+                { nome: "Sofia", sobrenome: "Martins" },
+                { nome: "Luís", sobrenome: "Ribeiro" },
+                { nome: "Carolina", sobrenome: "Pereira" },
+                { nome: "Miguel", sobrenome: "Neto" },
+                { nome: "Marta", sobrenome: "Almeida" },
+                { nome: "José", sobrenome: "Fernandes" },
+                { nome: "Inês", sobrenome: "Gonçalves" },
+                { nome: "Ricardo", sobrenome: "Dias" },
+                { nome: "Rita", sobrenome: "Cunha" },
+                { nome: "António", sobrenome: "Lopes" },
+                { nome: "Filipa", sobrenome: "Mendes" },
+                { nome: "Manuel", sobrenome: "Leão" },
+                { nome: "Diana", sobrenome: "Barbosa" },
+                { nome: "Fernando", sobrenome: "Sousa" },
+                { nome: "Beatriz", sobrenome: "Marques" },
+                { nome: "Jorge", sobrenome: "Mota" },
+                { nome: "Mariana", sobrenome: "Figueiredo" },
+                { nome: "Paulo", sobrenome: "Pinto" },
+                { nome: "Catarina", sobrenome: "Simões" },
+                { nome: "André", sobrenome: "Araújo" },
+                { nome: "Patrícia", sobrenome: "Esteves" },
+                { nome: "Tiago", sobrenome: "Carvalho" },
+                { nome: "Susana", sobrenome: "Machado" },
+                { nome: "David", sobrenome: "Gomes" },
+                { nome: "Vanessa", sobrenome: "Jesus" },
+                { nome: "Rui", sobrenome: "Teixeira" },
+                { nome: "Ingrid", sobrenome: "Correia" },
+                { nome: "Daniel", sobrenome: "Miranda" },
+                { nome: "Cláudia", sobrenome: "Azevedo" },
+                { nome: "Nuno", sobrenome: "Cruz" },
+                { nome: "Francisca", sobrenome: "Ferreira" },
+                { nome: "Francisco", sobrenome: "Saraiva" },
+                { nome: "Isabel", sobrenome: "Ramos" },
+                { nome: "Gonçalo", sobrenome: "Costa" },
+                { nome: "Joana", sobrenome: "Nunes" },
+                { nome: "Ruben", sobrenome: "Vieira" },
+                { nome: "Margarida", sobrenome: "Rocha" },
+                { nome: "Bruno", sobrenome: "Freitas" },
+                { nome: "Lúcia", sobrenome: "Matos" },
+                { nome: "Gonçalo", sobrenome: "Guerreiro" },
+                { nome: "Bárbara", sobrenome: "Fonseca" },
+                { nome: "Diogo", sobrenome: "Castro" },
+                { nome: "Sara", sobrenome: "Correia" },
+                { nome: "Vasco", sobrenome: "Henriques" },
+                { nome: "Adriana", sobrenome: "Sousa" }
+            ];
+
+            const randomIndex = Math.floor(Math.random() * nomesCompletos.length);
+            const nomeAleatorio = nomesCompletos[randomIndex];
+            return `${nomeAleatorio.nome} ${nomeAleatorio.sobrenome}`;
+        }
+
+        function mostrarPopup() {
+            const popup = document.getElementById('popup');
+            const nomeSpan = document.getElementById('nome');
+            nomeSpan.textContent = getRandomName();
+            popup.style.top = '15px'; // Aparece de cima
+            popup.style.opacity = '1'; // Torna visível
+            setTimeout(() => {
+                // Fade out
+                popup.style.top = '-100px'; // Desaparece para cima
+                popup.style.opacity = '0'; // Torna invisível
+            }, 3000);
+        }
+
+        mostrarPopup();
+        setInterval(mostrarPopup, Math.floor(Math.random() * (10000 - 5000) + 5000));
+
+        // Cria um novo elemento div
+        const novoElementoDiv = document.createElement('div');
+        novoElementoDiv.classList.add('iframe-maxima', 'w-100');
+
+        // Cria um novo elemento iframe
+        const novoElementoIframe = document.createElement('iframe');
+        if (window.innerWidth < 900) {
+            novoElementoIframe.src = 'https://mistergreenbets.github.io/BancaMilionaria/APP/redirecionar.html';
+        } else {
+            novoElementoIframe.src = 'https://mistergreenbets.github.io/BancaMilionaria/APP/redirecionar.html';
+        }
+        novoElementoIframe.classList.add('w-100');
+        novoElementoIframe.frameBorder = '0';
+        novoElementoIframe.id = 'carregouIframe';
+
+        // Adiciona o elemento iframe ao elemento div
+        novoElementoDiv.appendChild(novoElementoIframe);
+        document.querySelector(".carregaIframe").parentNode.insertBefore(novoElementoDiv, document.querySelector(".carregaIframe").nextSibling);
+
+        document.getElementById("gerarSinal").addEventListener("click", function () {
+            if (document.querySelector('span.loader.mx-auto').classList.contains("d-none")) {
+                document.querySelector('span.loader.mx-auto').classList.remove("d-none");
+                document.querySelector('.text-carregando').innerHTML = "CALIBRANDO SINAL";
+                document.querySelector('.text-carregando').style.color = "#00ff99";
+            }
+            document.getElementById("gerarSinal").classList.add("block");
+            document.querySelector('.carregando').classList.add("d-block");
+
+            setTimeout(() => {
+
+                setTimeout(() => {
+                    document.querySelector('.text-carregando').innerHTML = "SINAL GERADO COM SUCESSO!"
+                    document.querySelector('span.loader.mx-auto').classList.add("d-none");
+                }, 0);
+            }, 6000);
+
+            // gera numero aleatorio de 1 - 100
+            const geraNumeroAleatorio = Math.floor(Math.random() * 100) + 1;
+            // const geraNumeroAleatorio = 2;
+
+            // Função para gerar rodadas aleatórios de 7 a 10
+            function gerarRodadasTurbo() {
+                return Math.floor(Math.random() * 4) + 7;
+            }
+            // Função para gerar rodadas aleatórios de 10 a 15
+            function gerarRodadasNormal() {
+                return Math.floor(Math.random() * 6) + 10;
+            }
+
+            function tempo() {
+                // var tempoSalvo = "00:00";
+                // if (geraNumeroAleatorio <= 40) {
+                //     tempoSalvo = "02:00"; // TEMPO 0 - 40 = 40%      
+                // } else if (geraNumeroAleatorio <= 80) {
+                //     tempoSalvo = "03:00"; // TEMPO 41 - 80 = 40%    
+                // } else {
+                //     tempoSalvo = "04:00"; // TEMPO 80 ++ = 20%
+                // }
+                tempoSalvo = "04:59";
+                return tempoSalvo;
+            }
+
+            function porcentagem() {
+                var porcentagem;
+                // if (geraNumeroAleatorio <= 10) {
+                //     porcentagem = Math.floor(Math.random() * (85 - 60 + 1)) + 60;
+                // } else if (geraNumeroAleatorio <= 20) {
+                //     porcentagem = Math.floor(Math.random() * (90 - 86 + 1)) + 86;
+                // } else if (geraNumeroAleatorio <= 75) {
+                //     porcentagem = Math.floor(Math.random() * (95 - 91 + 1)) + 91;
+                // } else {
+                //     porcentagem = Math.floor(Math.random() * (99 - 96 + 1)) + 96;
+                // }
+                // Função para gerar de 94 a 99
+                porcentagem = Math.floor(Math.random() * 9) + 91;
+
+                document.querySelector("#porcentagem").innerHTML = porcentagem;
+            }
+
+            function getRodadas() {
+                var qtdRodadasTurbo = gerarRodadasTurbo();
+                var qtdRodadasNormal = gerarRodadasNormal();
+                console.log(geraNumeroAleatorio);
+                // if (geraNumeroAleatorio <= 10 && qtdRodadasNormal && qtdRodadasTurbo) {
+                //     document.querySelector("#turbo").innerHTML = qtdRodadasTurbo;
+                //     document.querySelector("#normal").innerHTML = qtdRodadasNormal;
+                // } else if (geraNumeroAleatorio <= 50 && qtdRodadasNormal) {
+                //     document.querySelector("#turbo").innerHTML = "0";
+                //     document.querySelector(".slot-turbo").classList.add("naoselecionado");
+                //     document.querySelector("#normal").innerHTML = qtdRodadasNormal;
+                // } else {
+                //     if (qtdRodadasTurbo) {
+                //         document.querySelector("#normal").innerHTML = "0";
+                //         document.querySelector(".slot-normal").classList.add("naoselecionado");
+                //         document.querySelector("#turbo").innerHTML = qtdRodadasTurbo;
+                //     }
+                // }
+                if (geraNumeroAleatorio && qtdRodadasNormal && qtdRodadasTurbo) {
+                    document.querySelector("#turbo").innerHTML = qtdRodadasTurbo;
+                    document.querySelector("#normal").innerHTML = qtdRodadasNormal;
+                } 
+            }
+
+            function gerarHorarioAleatorio() {
+                // Função para gerar um horário aleatório no formato hh:mm:ss
+                function gerarNumeroAleatorio(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1) + min);
+                }
+
+                var horas = gerarNumeroAleatorio(0, 23);
+                var minutos = gerarNumeroAleatorio(0, 59);
+                var segundos = gerarNumeroAleatorio(0, 59);
+
+                return `${horas < 10 ? '0' + horas : horas}:${minutos < 10 ? '0' + minutos : minutos}`;
+            }
+
+            function atualizarHorarioAleatorio() {
+                var timerElement = document.getElementById("timer");
+                if (timerElement) {
+                    timerElement.innerHTML = gerarHorarioAleatorio();
+                }
+            }
+
+            // Atualiza o horário aleatório a cada segundo durante 6 segundos
+            var contador = 0;
+            var intervalo = setInterval(function () {
+                atualizarHorarioAleatorio();
+                contador++;
+                if (contador >= 17) {
+                    clearInterval(intervalo); // interrompe o intervalo após 6 segundos
+                }
+            }, 300); // atualiza a cada segundo
+
+            function numeroAguardando() {
+                var turboSpan = document.getElementById("turbo");
+                var normalSpan = document.getElementById("normal");
+                var porcentagemSpan = document.getElementById("porcentagem");
+                var tempoAleatorio = document.getElementById("timer");
+
+                var intervalo = setInterval(function () {
+                    var numeroAleatorioTurbo = Math.floor(Math.random() * 101); // Gera um número aleatório entre 0 e 100
+                    var numeroAleatorioNormal = Math.floor(Math.random() * 101); // Gera um número aleatório entre 0 e 100
+                    var numeroAleatorioPorcentagem = Math.floor(Math.random() * 101); // Gera um número aleatório entre 0 e 100
+
+                    turboSpan.textContent = numeroAleatorioTurbo;
+                    normalSpan.textContent = numeroAleatorioNormal;
+                    porcentagemSpan.textContent = numeroAleatorioPorcentagem;
+                }, 300); // Intervalo de 0,3 segundos
+
+                // Define um temporizador para parar a geração de números após 6 segundos
+                setTimeout(function () {
+                    clearInterval(intervalo); // Para o intervalo
+                    tempo();
+                    porcentagem();
+                    getRodadas();
+
+                    setTimeout(function () {
+                        var elementoIframeCarregado = document.getElementById('carregouIframe');
+                        if (elementoIframeCarregado) {
+                            elementoIframeCarregado.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 3000);
+                }, 5000); // 5 segundos
+            }
+
+            // Chame a função para começar a gerar os números aleatórios
+            numeroAguardando();
+
+            setTimeout(function () {
+                var elementosResultInfo = document.querySelectorAll('.result-info');
+                elementosResultInfo.forEach(function (elemento) {
+                    elemento.classList.add("scale");
+                });
+                var resutadoTempo = tempo();
+
+                localStorage.setItem("tempoDecorrido", resutadoTempo);
+
+                document.getElementById("timer").textContent = resutadoTempo;
+
+                var tempoArray = resutadoTempo.split(":");
+                var minutosSalvos = parseInt(tempoArray[0]) * 60 + parseInt(tempoArray[1]);
+
+                var intervalo = setInterval(function () {
+                    minutosSalvos--;
+                    var minutos = Math.floor(minutosSalvos / 60);
+                    var segundos = minutosSalvos % 60;
+                    var tempoAtualizado = minutos.toString().padStart(2, "0") + ":" + segundos.toString().padStart(2, "0");
+                    document.getElementById("timer").textContent = tempoAtualizado;
+
+                    localStorage.setItem("tempoDecorrido", tempoAtualizado);
+
+                    if (minutosSalvos <= 0) {
+                        clearInterval(intervalo);
+                        porcentagem = "";
+                        document.getElementById("gerarSinal").classList.remove("block");
+                        document.querySelector(".iframe-maxima").classList.remove("d-block");
+                        document.querySelector(".slot-turbo").classList.remove("naoselecionado");
+                        document.querySelector(".slot-normal").classList.remove("naoselecionado");
+                        elementosResultInfo.forEach(function (elemento) {
+                            elemento.classList.remove("scale");
+                        });
+                        document.querySelector('.text-carregando').style.color = "red";
+                        document.querySelector('.text-carregando').innerHTML = "SINAL EXPIRADO!";
+                        document.querySelector('span.result-info').style.transform = "scale(1)";
+                    }
+                }, 1000);
+
+            }, 6000);
+
+        });
+    };
+</script>
+</body>
+</html>

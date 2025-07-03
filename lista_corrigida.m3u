@@ -1,0 +1,17 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/VYPJBvH/background.png",CANAIS
+#EXTBG:https://i.ibb.co/wNsYrsk/image.png
+http://imperioxcc.top/ssiptv/get/82521424/57539609/list_lives/
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/VYPJBvH/background.png",FILMES
+#EXTBG:https://i.ibb.co/C1MtCkN/image.png
+http://imperioxcc.top/ssiptv/get/82521424/57539609/movie_categories/
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/VYPJBvH/background.png",SÉRIES
+#EXTBG:https://i.ibb.co/41gWh6P/image.png
+http://imperioxcc.top/ssiptv/get/82521424/57539609/serie_categories/
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/VYPJBvH/background.png",24 HORAS
+#EXTBG:https://i.ibb.co/HGKxsg4/image.png
+http://imperioxcc.top/ssiptv/get/82521424/57539609/list_created_channels/

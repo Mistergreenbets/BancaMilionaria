@@ -499,6 +499,24 @@ Transforme seus minutos em dinheiro!" />
         ::-webkit-scrollbar-thumb:hover {
             background: #b14b92;
         }
+        
+        .pcl-viewers {
+            display: flex;
+            color: green;
+            /*mude a cor do número aqui*/
+            font-size: 20px;
+            font-family: "Poppins", Sans-serif;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center
+        }
+        .texto {
+            color: #ffffff;
+            /*mude a cor do texto aqui*/
+            margin-left: 5px;
+            font-weight: bold;
+            font-family: "Poppins", Sans-serif;
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -518,6 +536,34 @@ Transforme seus minutos em dinheiro!" />
 
   gtag('config', 'G-72QJJR4160');
 </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function random(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+            function countViewer(min, max, elementID) {
+                var element = document.querySelector(elementID);
+                var count = random(min, max);
+
+                setInterval(function () {
+                    var variation = random(-5, 5);
+
+                    count += variation;
+                    if (count < min) {
+                        count = min;
+                    } else if (count > max) {
+                        count = max;
+                    }
+                    element.textContent = count;
+
+                }, 2000); // Ajuste o intervalo conforme necess谩rio
+            }
+
+            // Definindo numero minimo e m谩ximo para a contagem de visualizadores
+            countViewer(1581, 1694, '#numberViewer');
+        });
+    </script>
 </head>
 
 <body>
@@ -540,6 +586,13 @@ Transforme seus minutos em dinheiro!" />
                     <button class="btn btn-success m-2 tabChangeButton active" id="pgsoftBtn">PGSoft</button>
                     <button class="btn btn-warning text-white m-2 tabChangeButton" id="pragmaticBtn">Pragmatic</button>
                 </div>
+<div class="pcl-viewers">
+    <img src="https://mistergreenbets.github.io/BancaMilionaria/img/live.png" height="25px">
+    <div class="usuarios">
+        <div id="numberViewer">1694</div>
+    </div>
+    <div class="texto">jogadores lucrando agora</div>
+</div>
 
                 <div class="content" id="pgSoftContent">
                     <!-- Conteúdo do pgSoft -->
@@ -5360,3 +5413,4 @@ Transforme seus minutos em dinheiro!" />
 </body>
 
 </html>
+

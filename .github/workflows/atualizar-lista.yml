@@ -1,0 +1,72 @@
+
+name: Atualizar lista IPTV
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-lista-iptv
+  cancel-in-progress: false
+
+jobs:
+  gerar-lista:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar arquivos do repositorio
+        uses: actions/checkout@v4
+
+      - name: Juntar as tres listas
+        run: |
+          python - <<'PY'
+          import urllib.request
+          from pathlib import Path
+
+          urls = [
+              "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/Filmes-Series.m3u8",
+              "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/CanaisBR01.m3u8",
+              "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/CanaisBR04.m3u8",
+          ]
+
+          partes = []
+
+          for url in urls:
+              req = urllib.request.Request(
+                  url,
+                  headers={"User-Agent": "Mozilla/5.0"}
+              )
+              with urllib.request.urlopen(req, timeout=120) as resposta:
+                  conteudo = resposta.read().decode("utf-8-sig")
+
+              linhas = conteudo.splitlines()
+              if not any(l.strip().startswith("#EXTINF") for l in linhas):
+                  raise RuntimeError("Lista sem canais ou invalida: " + url)
+
+              linhas = [
+                  linha for linha in linhas
+                  if linha.strip() and linha.strip() != "#EXTM3U"
+              ]
+              partes.extend(linhas)
+              print(f"Lista recebida: {url}")
+
+          saida = "#EXTM3U\n" + "\n".join(partes) + "\n"
+          Path("lista.m3u").write_text(saida, encoding="utf-8")
+          print(f"Arquivo criado com {len(partes)} linhas.")
+          PY
+
+      - name: Salvar lista atualizada
+        run: |
+          git add lista.m3u
+          if git diff --cached --quiet; then
+            echo "A lista nao mudou; nenhum commit necessario."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Atualiza lista IPTV"
+            git push
+          fi

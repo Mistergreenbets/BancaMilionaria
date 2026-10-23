@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Redirecionar - Bancas</title>
+</head>
+<body>
+  <script>
+  var urls = new Array();
+
+urls[0] = "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/CanaisBR01.m3u8";
+
+urls[1] = "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/CanaisBR04.m3u8";
+
+urls[2] = "https://raw.githubusercontent.com/Ramys/Iptv-Brasil-2026/refs/heads/master/Filmes-Series.m3u8";
+
+var random = Math.floor(Math.random()*urls.length); window.location = urls[random];
+
+  </script>
+</body>
+</html>
